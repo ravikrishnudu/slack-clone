@@ -1,0 +1,39 @@
+.sidebar {
+  background-color: var(--slack-color);
+  border-top: 1px solid #49272b;
+  max-width: 250px;
+  color: white;
+}
+.header {
+  display: flex;
+  padding: 13px;
+  padding-bottom: 10px;
+  border: 1px solid #49272b;
+}
+.info {
+  flex: 1;
+}
+.info > h2 {
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+.info > h3 {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+}
+.createIcon {
+  padding: 8px;
+  color: #49272b;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 999px;
+}
+.recodIcon {
+  font-size: 14px;
+  margin-top: 1px;
+  margin-right: 2px;
+  color: green;
+}

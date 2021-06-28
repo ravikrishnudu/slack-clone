@@ -18,8 +18,8 @@ function Header() {
         <AccessTimeIcon />
       </div>
       <div className={styles.search}>
-        <SearchIcon />
         <input type="text" placeholder="welcome to slack clone " />
+        <SearchIcon />
       </div>
       <div className={styles.headerRight}>
         <HelpOutlineIcon />

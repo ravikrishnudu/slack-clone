@@ -1,0 +1,30 @@
+.SidebarOption {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding-left: 2px;
+  cursor: pointer;
+}
+.SidebarOption:hover {
+  opacity: 0.9;
+  background-color: #340e36;
+}
+
+.icon {
+  padding: 10px;
+  font-size: 15px !important;
+}
+.channel {
+  padding: 10px 0;
+}
+.hash {
+  padding: 10px;
+}
+.SidebarOption > h3 {
+  font-weight: 500;
+}
+.Sidebar > hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #49274b;
+}
