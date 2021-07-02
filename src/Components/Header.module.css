@@ -20,7 +20,7 @@
   display: flex;
   padding: 0 50px;
   color: gray;
-  border: 1px gray soild;
+  border: 1px gray soild;font: 1em sans-serif;
   border-radius: 6px;
 }
 .search > input {
@@ -34,6 +34,7 @@
   display: flex;
   align-items: flex-end;
 }
+
 .headerRight > .MuiSvgIcon-root {
   margin-left: auto;
   margin-right: 20px;
