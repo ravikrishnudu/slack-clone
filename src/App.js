@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./Components/Header";
 import styles from "./App.module.css";
 import Sidebar from "./Components/Sidebar";
@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <Router>
-        {!user ? ( 
+        {!user ? (
           <Login />
         ) : (
           <>
