@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Header.module.css";
 import { Avatar } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
+import { useStateValue } from "./StateProvider";
+
 function Header() {
+  const [{ user }] = useStateValue();
   return (
     <div className={styles.header}>
       <div className={styles.headerLeft}>
         <Avatar
           className={styles.avatar}
-          //   alt={user?.displayName}
-          //   src={user?.photoURL}
-          alt="ravi"
-          src=""
+          alt={user?.displayName}
+          src={user?.photoURL}
         />
         <AccessTimeIcon />
       </div>

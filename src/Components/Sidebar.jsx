@@ -14,9 +14,11 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 import db from "./Firebase";
+import { useStateValue } from "./StateProvider";
 
 function Sidebar() {
   const [channels, setChannels] = useState([]);
+  const [{ user }] = useStateValue();
 
   useEffect(() => {
     db.collection("rooms").onSnapshot((snapshot) =>
@@ -36,7 +38,7 @@ function Sidebar() {
           <h2>Slack Clone</h2>
           <h3>
             <FiberManualRecordIcon className={styles.recodIcon} />
-            Ravi
+            {user?.displayName}
           </h3>
         </div>
         <CreateIcon className={styles.createIcon} />
@@ -52,7 +54,7 @@ function Sidebar() {
       <hr />
       <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
       <hr />
-      <SidebarOption Icon={AddIcon} addChannelOption title='Add Channel' />
+      <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
       {channels.map((channel) => (
         <SidebarOption title={channel.name} id={channel.id} />
       ))}
